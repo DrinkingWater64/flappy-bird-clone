@@ -7,12 +7,14 @@ class Pipe{
         this.speed = 5;
         this.hitted = false;
         this.colorValue = 0;
+        this.color = color(int(random(225)),int(random(225)),int(random(225)));
     }
 
         show(){
-            fill(225);
+            noStroke();
+            fill(this.color);
             if(this.hitted){
-                fill(this.colorGenerator(), this.colorGenerator() ,this.colorGenerator());
+                fill(this.colorGenerator(), this.colorGenerator(), this.colorGenerator());
             }
             //this.hitted = false;
             rect(this.x, 0, this.w, this.top);

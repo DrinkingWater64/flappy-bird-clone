@@ -1,7 +1,7 @@
 class Bird{
     constructor(){
         this.y = height/2;
-        this.x = width/2;
+        this.x = width/3;
         this.gravity = .8;
         this.velocity = 0;
     }
