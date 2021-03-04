@@ -35,3 +35,8 @@ function keyPressed() {
         console.log(bird.velocity); 
     }
 }
+
+function touchEnded(){
+    bird.up();
+
+}
