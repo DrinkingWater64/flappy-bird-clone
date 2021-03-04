@@ -6,12 +6,13 @@ class Pipe{
         this.w = 20;
         this.speed = 5;
         this.hitted = false;
+        this.colorValue = 0;
     }
 
         show(){
             fill(225);
             if(this.hitted){
-                fill(225, 225 ,0);
+                fill(this.colorGenerator(), this.colorGenerator() ,this.colorGenerator());
             }
             //this.hitted = false;
             rect(this.x, 0, this.w, this.top);
@@ -39,6 +40,11 @@ class Pipe{
             } else {
                 return false;
             }
+        }
+
+        colorGenerator(){
+            this.colorValue=random(225);
+            return this.colorValue;
         }
     
 }
